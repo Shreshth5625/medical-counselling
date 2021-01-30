@@ -5,7 +5,7 @@ Running on - medical-platform.surge.sh
 ### Frontend
 * Clone or download the repo. into any fresh temporary folder.
 ```
-git clone https://github.com/Paarmita/MedicalProject
+git clone https://github.com/Shreshth5625/medical-counselling.git
 ```
 * Cd into that root folder you just cloned locally.
 ```

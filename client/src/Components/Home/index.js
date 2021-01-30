@@ -206,7 +206,7 @@ class Home extends Component {
 										</h4>
 									</div>
 									<div className="subscribe-div">
-										<label class="sr-only" for="inlineFormInputName2">
+										<label className="sr-only" htmlFor="inlineFormInputName2">
 											Name
 										</label>
 										<input
@@ -214,7 +214,7 @@ class Home extends Component {
 											required-pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
 											value={this.state.email}
 											onChange={this.onChange}
-											class="form-control"
+											className="form-control"
 											id="inlineFormInputName2"
 											placeholder="Email"
 											style={{
@@ -226,7 +226,7 @@ class Home extends Component {
 										{/* <p></p> */}
 										<button
 											type="submit"
-											class="btn btn-outline-primary"
+											className="btn btn-outline-primary"
 											style={{
 												marginLeft: '20px',
 												border: '3px solid #007bff',
