@@ -13,5 +13,6 @@
     "/posts/by/:userId": "get posts by user",
     "/post/:postId": "get/update/delete post",
     "/post/photo/:postId": "get post photo",
+    "/forgot-password" : "reset password",
     "url": "https://medical-umbrella.herokuapp.com"
 }

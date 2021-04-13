@@ -1,6 +1,6 @@
 //export const serverUrl = 'https://infinite-harbor-95705.herokuapp.com';
-export const serverUrl = 'http://localhost:5000';
-export const clientUrl = 'http://localhost:3000';
+exports.serverUrl = 'http://localhost:8080';
+exports.clientUrl = 'http://localhost:3000';
 //export const serverUrl = '${serverUrl}';
 //export const clientUrl = 'https://gifted-gates-e3aa20.netlify.app';
 

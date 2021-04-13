@@ -42,7 +42,7 @@ class Feedback extends Component {
 
 		const res = await createFeedback(object);
 		console.log(res);
-		if (res.status == 200) {
+		if (res.status === 200) {
 			getFeedbacks().then(feedbacks => {
 				this.setState({
 					feedback: feedbacks,

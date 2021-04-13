@@ -1,4 +1,9 @@
 import { serverUrl } from '../variables';
+import axios from 'axios';
+
+const dotenv = require("dotenv");
+dotenv.config();
+
 
 export const signup = user => {
 	return fetch(`${serverUrl}/api/signup`, {
@@ -59,12 +64,86 @@ export const signout = next => {
 };
 
 export const isAuthenticated = () => {
-	if (typeof window === 'undefined') {
-		return false;
+	try {
+		if (localStorage.getItem('jwt')) {
+			return JSON.parse(localStorage.getItem('jwt'));
+		}
+		if (typeof window === 'undefined') {
+			return false;
+		}
+	} catch (error) {
+		console.error();
 	}
 
-	if (localStorage.getItem('jwt')) {
-		return JSON.parse(localStorage.getItem('jwt'));
-	}
 	return false;
+};
+
+
+export const forgotPassword = async (email) => {
+   
+	 try {
+	
+		// try axios.get once
+		 console.log("email is the: ", email);
+		
+		// 	data : email
+		//   };
+
+		// axios(config).then(function (response) {
+		// 	console.log(JSON.stringify(response.data));
+		// })
+
+		return fetch(`${serverUrl}/api/forgot-password/`, {
+			method: "PUT",
+			headers: { 
+				Accept: "application/json",
+				"Content-Type": "application/json"
+			  },
+			// headers: {
+			// 	Accept: "application/json",
+			// 	"Content-Type": "application/json"
+			// },
+			body: JSON.stringify({ email })
+		})
+			.then(response => {
+				console.log("forgot password response: ", response);
+				return response.json();
+			})
+	} catch(err) {
+		console.log(err)
+	} 
+};
+ 
+export const resetPassword = resetInfo => {
+    return fetch(`${process.env.REACT_APP_API_URL}/reset-password/`, {
+        method: "PUT",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(resetInfo)
+    })
+        .then(response => {
+            console.log("forgot password response: ", response);
+            return response.json();
+        })
+        .catch(err => console.log(err));
+};
+
+
+export const socialLogin = user => {
+    return fetch(`${serverUrl}/api/social-login/`, {
+        method: "POST",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+        },
+        // credentials: "include", // works only in the same origin
+        body: JSON.stringify(user)
+    })
+        .then(response => {
+            console.log("signin response: ", response);
+            return response.json();
+        })
+        .catch(err => console.log(err));
 };

@@ -4,6 +4,9 @@ import { signin, authenticate } from '../../Api';
 import loader from '../../Images/loader2.gif';
 import './style.css';
 
+import { Link} from "react-router-dom"
+import SocialLogin from "../Users/SocialLogin";
+
 class Signin extends Component {
 	constructor() {
 		super();
@@ -46,12 +49,15 @@ class Signin extends Component {
 	};
 
 	render() {
+		
+		
 		const { email, password, error, redirectToReferer, loading, open } = this.state;
 
 		if (redirectToReferer) {
 			return <Redirect to="/" />;
 		}
 		return (
+			
 			<div className="container signIn">
 				<div className="row">
 					<div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
@@ -116,11 +122,17 @@ class Signin extends Component {
 											return <label className="signlabel" />;
 										})()}
 									</div>
-									<p className="text-right">
+									{/* <p className="text-right">
 										<small>
 											<a href="/">Forgot password?</a>
 										</small>
-									</p>
+									</p> */}
+									<p>
+										<Link to="/forgot-password" className="text-danger">
+											{" "}
+											Forgot Password
+										</Link>
+										</p>
 									<button
 										className="btn btn-lg btn-primary text-uppercase signBtn"
 										type="submit"
@@ -128,13 +140,17 @@ class Signin extends Component {
 									>
 										Sign in
 									</button>
+
 									<p className="text-center">
 										<br />
-										or <br /> <br /> continue with {'  '}
+										or <br />
+										 {/* <br /> continue with {'  '} */}
+										{/* <h2 className="mt-5 mb-5">Sign In</h2>  */}
+												<hr /><SocialLogin /><hr />
 										{/* <a href='/' className="border-around"><i className="fa fa-google" /> </a> {'  '}
 										<a href='/' className="border-around"><i className="fa fa-facebook" /> </a> {'  '}
 										<a href='/' className="border-around"><i className="fa fa-twitter" /> </a> */}
-										<ul className="social-network social-circle ">
+										{/* <ul className="social-network social-circle ">
 											<li>
 												<a
 													href="/"
@@ -154,12 +170,13 @@ class Signin extends Component {
 													<i className="fa fa-google-plus" />
 												</a>
 											</li>
-										</ul>
+										</ul> */}
 									</p>
 									<hr className="my-4" />
 									<p className="text-center">
 										Don't have an account?<a href="/signup"> SignUp</a>
 									</p>
+									
 								</form>
 							</div>
 						</div>

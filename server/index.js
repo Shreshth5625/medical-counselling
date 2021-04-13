@@ -17,7 +17,7 @@ dotenv.config();
 // db
 // MONGO_URI=mongodb://localhost/nodeapi
 mongoose
-  .connect(config.mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(config.mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex : true,  useFindAndModify: false})
   .then(() => console.log('DB Connected'));
 
 ///hello
@@ -88,7 +88,7 @@ app.use(function (err, req, res, next) {
   }
 });
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8080 ;
 app.listen(port, () => {
   console.log(`A Node Js API is listening on port: ${port}`);
 });

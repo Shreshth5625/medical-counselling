@@ -6,6 +6,7 @@ import { singlePost, remove, like, unlike } from '../../Api/Post';
 import DefaultPost from '../../Images/mountains.jpg';
 import { isAuthenticated } from '../../Api';
 import { serverUrl } from '../variables';
+import ShareExperience from '../ShareExperience'
 
 class SinglePost extends Component {
 	state = {
@@ -101,6 +102,16 @@ class SinglePost extends Component {
 						{isAuthenticated().user &&
 							isAuthenticated().user._id === post.postedBy._id && (
 								<>
+									{/* <Link
+										to={`/post/edit/${post._id}`}
+										className="btn btn-raised btn-warning btn-sm mx-2"
+									>
+										<span>
+											<i className="fa fa-edit mr-2" />
+										</span>{' '}
+										Update Post
+									</Link> */}
+
 									<Link
 										to={`/post/edit/${post._id}`}
 										className="btn btn-raised btn-warning btn-sm mx-2"
@@ -110,6 +121,7 @@ class SinglePost extends Component {
 										</span>{' '}
 										Update Post
 									</Link>
+
 									<button
 										type="button"
 										onClick={this.deleteConfirmed}

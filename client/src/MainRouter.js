@@ -34,10 +34,17 @@ import AddSubdisease from './Components/Diseases/AddSubdisease';
 import UpdateDisease from './Components/Diseases/UpdateDisease';
 import UpdateSubdisease from './Components/Diseases/UpdateSubdisease';
 
+import ForgotPassword from "./Components/Users/ForgotPassword"
+import ResetPassword from "./Components/Users/ResetPassword";
+
+
 const MainRouter = () => (
 	<div>
 		<Switch>
 			<Route exact path="/" component={Home} />
+			<Route exact path="/forgot-password" component={ForgotPassword} />
+			<Route exact path="/reset-password/:resetPasswordToken" component={ResetPassword}/>
+			
 			<Route exact path="/posts" component={ViewPosts} />
 			<Route exact path="/post/:postId" component={SinglePost} />
 			<Route exact path="/pathy" component={Pathy} />

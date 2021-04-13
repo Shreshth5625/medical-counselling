@@ -3,7 +3,7 @@
 ### Backend
 * Clone or download the repo. into any fresh temporary folder.
 ```
-git clone https://github.com/Paarmita/MedicalProject
+git clone https://github.com/Shreshth5625/medical-counselling.git
 ```
 * Cd into that root folder you just cloned locally.
 ```
@@ -17,8 +17,8 @@ npm install
 ``` 
  npm run server
  ```
-* Server will start at http://localhost:8080/api/
-* Hosted URl  https://medical-umbrella.herokuapp.com
+<!-- * Server will start at http://localhost:8080/api/
+* Hosted URl  https://medical-umbrella.herokuapp.com -->
 
 ## Description
 * A restful Api built for serving as a Backend for a Medical Councelling app.

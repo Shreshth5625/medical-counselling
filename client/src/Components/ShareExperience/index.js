@@ -95,7 +95,7 @@ class NewPost extends Component {
 				plainArray: [...this.state.plainArray, lowercase],
 			});
 
-			this.state.customTag = '';
+			this.setstate({customTag : ''});
 
 			event.preventDefault();
 		}

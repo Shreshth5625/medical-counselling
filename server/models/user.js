@@ -36,6 +36,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     trim: true
   },
+  resetPasswordLink: {
+    data: String,
+    default: ""
+  },
   following: [{ type: ObjectId, ref: "User" }],
   followers: [{ type: ObjectId, ref: "User" }],
   role: {
@@ -43,6 +47,7 @@ const userSchema = new mongoose.Schema({
     default: "subscriber"
   },
   bookmarks: [{ type: ObjectId, ref: 'Subdisease' }],
+  
 });
 
 // When a single user is retrived from the backend, we want the user object to include the names and IDs

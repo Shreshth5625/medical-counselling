@@ -1,9 +1,26 @@
 const express = require("express");
-const { signup, signin, signout } = require("../controllers/auth");
 const { userById } = require("../controllers/user");
-const { userSignupValidator } = require("../validator");
 
 const router = express.Router();
+
+const {
+    signup,
+    signin,
+    signout,
+    forgotPassword,
+    resetPassword,
+    socialLogin
+} = require("../controllers/auth");
+ 
+// import password reset validator
+const { userSignupValidator, passwordResetValidator } = require("../validator/index");
+ 
+// password forgot and reset routes
+router.put("/forgot-password", forgotPassword);
+router.put("/reset-password", passwordResetValidator, resetPassword);
+
+// Login with google
+router.post("/social-login", socialLogin);
 
 router.post("/signup", userSignupValidator, signup);
 router.post("/signin", signin);

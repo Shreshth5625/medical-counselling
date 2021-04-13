@@ -33,7 +33,7 @@ class UpdateDisease extends React.Component {
 		});
 		const res = await updateDisease(this.props.match.params.dId, object);
 		console.log(res);
-		if (res.status == 200) {
+		if (res.status === 200) {
 			this.props.history.push('/diseases');
 		}
 	};
