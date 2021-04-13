@@ -1,7 +1,7 @@
 .postButton {
-	width: 280px;
+	width: 200px;
 	height: 47px;
-	margin-bottom: 2%;
+	margin-bottom: 0%;
 }
 .mob-table {
 	-ms-overflow-style: none; /* IE and Edge */
@@ -24,6 +24,12 @@
 
 .left-right {
 	padding-left: 48%;
+}
+
+.post-heading {
+	margin-bottom: 10px !important;
+	padding-top: 0px !important;
+	
 }
 
 @media (max-width: 768px) {

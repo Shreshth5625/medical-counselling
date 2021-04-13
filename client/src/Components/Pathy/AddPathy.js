@@ -44,7 +44,7 @@ class AddPathy extends React.Component {
 				<br /> <br />
 				<div className="card">
 					<div className="card-body">
-						<div className="card-title">Add New Pathy</div>
+						<div className="card-title">Add New Pathy </div>
 						<form onSubmit={this.handleSubmit}>
 							<div className="form-group">
 								<label>Name of Pathy</label>

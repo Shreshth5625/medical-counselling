@@ -18,11 +18,11 @@ class ViewPosts extends React.Component {
 			<>
 				<div className="container mb-5">
 					<div>
-						<h2 className="mt-5">Posts</h2>
-						<p className="lead lead-post">
+						<h2 className="mt-5 post-heading"><br></br>Posts</h2>
+						{/*<p className="lead lead-post">
 							{' '}
 							View all type of post like share experience, asking suggestions
-						</p>
+						</p>*/}
 						<div className="text-right">
 							<p className="btn btn-outline-primary btn-sm postButton">
 								<Link

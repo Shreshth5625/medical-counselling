@@ -25,7 +25,7 @@ class AboutUs extends React.Component {
 	render() {
 		return (
 			<div className="container">
-				<h2 className="my-5 aboutTitle">About Us</h2>
+				<h2 className="my-5 aboutTitle"><br></br>About Us</h2>
 				<div className="row">
 					<div className=" col-sm-12 col-md-6  ">
 						<div className="wrap">
