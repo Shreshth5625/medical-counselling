@@ -56,6 +56,14 @@
 		font-size: 18px;
 	}
 }
+
+.nav-link {
+	float: right;
+}
+
+.nav-item {
+	float: right;
+}
 /* .test{
 	color: #f4f4f4 !important;
 }

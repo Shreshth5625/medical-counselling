@@ -76,7 +76,7 @@ class ContactUs extends Component {
 	render() {
 		return (
 			<div className="container">
-				<h2 className="my-5 contactus-heading">Contact Us</h2>
+				<h2 className="my-5 contactus-heading"><br></br>Contact Us</h2>
 				<p className="lead lead-contactus">
 					Tell us about your company, your data, and your analytic goals. We can help you
 					use your data to make better decisions. And if you don't currently have the data

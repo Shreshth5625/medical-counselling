@@ -397,6 +397,7 @@ class NavDropdown extends React.Component {
                  aria-expanded="false"
                  to={`/user/${isAuthenticated().user._id}`}
                  style={{ color: '#fff' }}
+                 float="right"
                  onClick={e => {
                      this.showDropdown(e);
                  }}
@@ -562,7 +563,7 @@ class Navigation extends React.Component {
                              </Link>
                          </li>
                      </ul>
-
+                    <t></t>
                      <ul className="nav navbar-nav navbar-right ml-md-auto ">
                          {!isAuthenticated() && (
                              <>
@@ -603,7 +604,7 @@ class Navigation extends React.Component {
                                      style={isActive(history, `/admin`)}
                                      className="nav-link"
                                  >
-                                     Admin
+                                    Admin
                                  </Link>
                              </li>
                          )}

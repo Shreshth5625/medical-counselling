@@ -80,7 +80,7 @@ class Feedback extends Component {
 							<div class="form-group">
 								<label className="text-muted">Name</label> {'   '}
 								<span>
-									<i>(Post it</i>{' '}
+									<i>(Post it </i>
 									<a
 										style={{ color: 'blue', cursor: 'pointer' }}
 										onClick={e => this.setState({ name: 'Anonymous' })}

@@ -20,16 +20,18 @@ class Pathy extends React.Component {
 	render() {
 		return (
 			<div className="container">
-				<br />
+				
+				<h2 className="my-5 pathy-heading"><br></br>Pathy</h2>
+				<div className="text-right">
 				{isAuthenticated() && isAuthenticated().user.role === 'admin' && (
 					<a href="/add_pathy" className="btn btn-outline-primary btn-sm">
 						{' '}
-						<i className="fa fa-plus" /> Add New
+						<i className="fa fa-plus" /> Add New 
 					</a>
-				)}
-
-				<h2 className="my-5">Pathy</h2>
-
+				)}<br></br><br></br>
+				</div>
+				
+				
 				{this.state.pathy.map((data, i) => {
 					return (
 						<div className="card pathy-card mb-4">
@@ -51,6 +53,8 @@ class Pathy extends React.Component {
 						</div>
 					);
 				})}
+				
+
 
 				{/* <div className="text-wrap vcenter">
 					<h3 className="text-bold">Ayurveda</h3>
