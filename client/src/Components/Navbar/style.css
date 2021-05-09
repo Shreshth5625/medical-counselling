@@ -57,12 +57,18 @@
 	}
 }
 
-.nav-link {
+/* .nav-link {
 	float: right;
 }
 
 .nav-item {
 	float: right;
+} */
+
+.nav-item-drop {
+	float: right;
+	width: 200px;
+	font-family: sans-serif;
 }
 /* .test{
 	color: #f4f4f4 !important;

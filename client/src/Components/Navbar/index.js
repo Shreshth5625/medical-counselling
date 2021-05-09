@@ -386,7 +386,7 @@ class NavDropdown extends React.Component {
  render() {
      const classDropdownMenu = `dropdown-menu${this.state.isToggleOn ? ' show' : ''}`;
      return (
-         <li className="nav-item dropdown">
+         <div className="nav-item-drop dropdown">
              <Link
                  className="nav-link dropdown-toggle"
                  href="/"
@@ -415,7 +415,7 @@ class NavDropdown extends React.Component {
              >
                  {this.props.children}
              </div>
-         </li>
+         </div>
      );
  }
 }
