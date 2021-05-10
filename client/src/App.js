@@ -4,7 +4,7 @@ import MainRouter from './MainRouter';
 import { isAuthenticated } from './Api';
 import Navigation from './Components/Navbar';
 import Footer from './Components/Footer';
-
+import ScrollToTop from './Scroll';
 // const App = () => (
 // 	<BrowserRouter>
 // 		<div>
@@ -30,6 +30,7 @@ class App extends React.Component {
 		return (
 			<BrowserRouter>
 				<div>
+					<ScrollToTop />
 					<Navigation />
 					{isAuthenticated() ? (
 						<div style={{ marginLeft: '0px', marginTop: '70px' }}>

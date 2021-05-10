@@ -131,7 +131,7 @@ class Posts extends React.Component {
 										<Link to={`${posterId}`}>{posterName} </Link>
 									</td>
 									{/* <p className="card-text">{post.body.substring(0, 100)}</p> */}
-									<td style={{ wordBreak: 'break-word' }}>{post.tags[0]}</td>
+									<td style={{ wordBreak: 'break-word', width:'130px' }}>{post.tags[0]}</td>
 									{/* only some charaters are visible in the posts */}
 
 									{/* <p className="font-italic mark">
