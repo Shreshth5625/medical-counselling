@@ -16,7 +16,7 @@ class ViewPosts extends React.Component {
 		const { history } = this.props;
 		return (
 			<>
-				<div className="container mb-5">
+				<div className="container mb-2">
 					<div>
 						<h2 className="mt-5 post-heading"><br></br>Posts</h2>
 						{/*<p className="lead lead-post">
