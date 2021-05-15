@@ -120,7 +120,7 @@ class Posts extends React.Component {
 									<Link to={`${posterId}`}>{posterName} </Link>
 									on {new Date(post.created).toDateString()}
 								</p> */}
-									<td className="col-xs-8">
+									<td className="col-xs-8" style={{ width:'130px' }}>
 										{new Date(post.created).toDateString()}
 									</td>
 									{/* <p>
