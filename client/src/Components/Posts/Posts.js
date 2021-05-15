@@ -85,7 +85,7 @@ class Posts extends React.Component {
 			<div className="row">
 				<Table striped bordered hover>
 					<thead>
-						<tr>
+						<tr style={{ 'text-align': 'center' }}>
 							<th>Heading</th>
 							<th>Date Posted</th>
 							<th>Posted by</th>
@@ -114,13 +114,13 @@ class Posts extends React.Component {
 									className="img-thunbnail mb-3"
 									style={{ height: '200px', width: '100%' }}
 								/> */}
-									<td className="card-title col-xs-8">{post.title}</td>
+									<td className="card-title col-xs-8" style={{textAlign:'center'}}>{post.title}</td>
 									{/* <p>
 									<span className="fa fa-clock-o" /> Posted by{' '}
 									<Link to={`${posterId}`}>{posterName} </Link>
 									on {new Date(post.created).toDateString()}
 								</p> */}
-									<td className="col-xs-8" style={{ width:'130px' }}>
+									<td className="col-xs-8" style={{ width:'130px' , textAlign:'center'}}>
 										{new Date(post.created).toDateString()}
 									</td>
 									{/* <p>
@@ -131,7 +131,7 @@ class Posts extends React.Component {
 										<Link to={`${posterId}`}>{posterName} </Link>
 									</td>
 									{/* <p className="card-text">{post.body.substring(0, 100)}</p> */}
-									<td style={{ wordBreak: 'break-word', width:'130px' }}>{post.tags[0]}</td>
+									<td style={{ wordBreak: 'break-word', width:'130px', textAlign:'center'}}>{post.tags[0]}</td>
 									{/* only some charaters are visible in the posts */}
 
 									{/* <p className="font-italic mark">
@@ -139,7 +139,7 @@ class Posts extends React.Component {
 									on {new Date(post.created).toDateString()}
 								</p> */}
 									<td className="col-xs-8">{post.likes.length}</td>
-									<td style={{ wordBreak: 'break-word' }}>{post.body}</td>
+									<td style={{ wordBreak: 'break-word', textAlign:'center' }}>{post.body}</td>
 
 									<td>
 										<Link to={`/post/${post._id}`}>Read more</Link>
