@@ -11,8 +11,8 @@ exports.sendEmail = async (emailData) => {
         secure: false,
         requireTLS: true,
         auth: {
-            user: "medicalhealthproject@gmail.com",
-            pass: "vbvxfonglfgcygsy"
+            user: "medicalhealthproject",
+            pass: "ldwtdkzgexxyfdvj"
         }
     });
 
