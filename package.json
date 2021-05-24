@@ -29,6 +29,7 @@
     "jsonwebtoken": "^8.4.0",
     "lodash": "^4.17.21",
     "mailchimp-api-v3": "^1.14.0",
+    "mongodb": "^3.6.8",
     "mongoose": "^5.12.9",
     "morgan": "^1.9.1",
     "node-fetch": "^2.6.1",
