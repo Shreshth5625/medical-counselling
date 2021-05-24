@@ -21,7 +21,7 @@ class Pathy extends React.Component {
 		return (
 			<div className="container">
 				
-				<h2 className="my-5 pathy-heading" style  = {{textAlign:'center'}}><br></br>Pathy</h2>
+				<h2 className="my-5 pathy-heading" ><br></br>Pathy</h2>
 				<div className="text-right">
 				{isAuthenticated() && isAuthenticated().user.role === 'admin' && (
 					<a href="/add_pathy" className="btn btn-outline-primary btn-sm">
