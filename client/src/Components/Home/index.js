@@ -105,7 +105,7 @@ class Home extends Component {
 													</div>
 
 													<div className="mainBtn">
-														<Link to="/share_experience">
+														<Link to="/contactus">
 															<button
 																type="button"
 																className="btn  buttonJoin buttonJoinDark float-left"
