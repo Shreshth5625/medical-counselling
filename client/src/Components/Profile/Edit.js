@@ -21,6 +21,10 @@ class EditProfile extends React.Component {
 			loading: false,
 			about: '',
 			photo: '',
+			age: '',
+			gender: '',
+			phoneNumber: '',
+			birthday: ''
 		};
 	}
 
@@ -43,6 +47,10 @@ class EditProfile extends React.Component {
 					email: data.email,
 					about: data.about,
 					error: '',
+					age: data.age,
+					gender: data.gender,
+					phoneNumber : data.phoneNumber,
+					birthday: data.birthday
 				});
 			}
 		});
@@ -136,7 +144,7 @@ class EditProfile extends React.Component {
 		}
 	};
 
-	signupForm = (id, name, email, password, about, photoUrl) => (
+	signupForm = (id, name, email, password, about, photoUrl, age, gender, phoneNumber, birthday) => (
 		<div className="container">
 			<div className="col-lg-4">
 				<h2 className="my-5">Edit Profile</h2>
@@ -216,25 +224,46 @@ class EditProfile extends React.Component {
 				<div className="form-group row">
 					<label className="col-lg-3 col-form-label form-control-label">Phone No</label>
 					<div className="col-lg-9">
-						<input className="form-control" type="url" value="" />
+					<input
+								onChange={this.handleChange('phoneNumber')}
+								type="string"
+								className="form-control"
+								value={phoneNumber}
+							/>
 					</div>
 				</div>
 				<div className="form-group row">
 					<label className="col-lg-3 col-form-label form-control-label">Birthday</label>
 					<div className="col-lg-9">
-						<input className="form-control" type="text" value="28-07-1998" />
-					</div>
+						<input
+								onChange={this.handleChange('birthday')}
+								type="date"
+								className="form-control"
+								value={birthday}
+							/>
+						</div>
 				</div>
-				<div className="form-group row">
+				<div className="form-group row" >
 					<label className="col-lg-3 col-form-label form-control-label">Age</label>
 					<div className="col-lg-9">
-						<input className="form-control" type="password" value="11111122333" />
-					</div>
+						<input
+								onChange={this.handleChange('age')}
+								type="string"
+								className="form-control"
+								value={age}
+							/>
+						</div>
 				</div>
 				<div className="form-group row">
 					<label className="col-lg-3 col-form-label form-control-label">Gender</label>
 					<div className="col-lg-9">
-						<input className="form-control" type="password" value="11111122333" />
+						<input
+								onChange={this.handleChange('gender')}
+								type="string"
+								className="form-control"
+								value={gender}
+						/>
+						
 					</div>
 				</div>
 				<div className="form-group row">
@@ -326,7 +355,7 @@ class EditProfile extends React.Component {
 	);
 
 	render() {
-		const { id, name, email, password, redirectToProfile, error, loading, about } = this.state;
+		const { id, name, email, password, redirectToProfile, error, loading, about, age, gender, phoneNumber, birthday } = this.state;
 		if (redirectToProfile) {
 			return <Redirect to={`/user/${id}`} />;
 		}
@@ -345,7 +374,7 @@ class EditProfile extends React.Component {
 				) : (
 					''
 				)}
-				{this.signupForm(id, name, email, password, about, photoUrl)}
+				{this.signupForm(id, name, email, password, about, photoUrl, age, gender, phoneNumber, birthday)}
 			</div>
 		);
 	}
