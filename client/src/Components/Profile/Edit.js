@@ -257,12 +257,16 @@ class EditProfile extends React.Component {
 				<div className="form-group row">
 					<label className="col-lg-3 col-form-label form-control-label">Gender</label>
 					<div className="col-lg-9">
-						<input
-								onChange={this.handleChange('gender')}
-								type="string"
-								className="form-control"
-								value={gender}
-						/>
+						{/* <input
+								// onChange={this.handleChange('gender')}
+								// type="string"
+								// className="form-control"
+								// value={gender}
+						/> */}
+						<select value={this.state.gender} onChange={this.handleChange('gender')}> 
+							<option name="male"> Male</option>
+							<option name="female">Female</option>
+						</select>
 						
 					</div>
 				</div>
