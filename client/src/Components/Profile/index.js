@@ -229,7 +229,7 @@ class Profile extends react.Component {
 										<p>Phone</p>
 									</div>
 									<div className="col-md-6">
-										{/* <p>{profile.basicInformation.phoneno}</p> */}
+										<p>{user.phoneNumber}</p>
 									</div>
 								</div>
 								<div className="row">
@@ -238,6 +238,7 @@ class Profile extends react.Component {
 									</div>
 									<div className="col-md-6">
 										{/* <p>{profile.basicInformation.age}</p> */}
+										<p>{user.age}</p>
 									</div>
 								</div>
 								<div className="row">
@@ -246,6 +247,7 @@ class Profile extends react.Component {
 									</div>
 									<div className="col-md-6">
 										{/* <p>{profile.basicInformation.gender}</p> */}
+										<p>{user.gender}</p>
 									</div>
 								</div>
 								<div className="row">
@@ -265,6 +267,7 @@ class Profile extends react.Component {
 									</div>
 									<div className="col-md-6">
 										{/* <p>{profile.basicInformation.birthday}</p> */}
+										<p>{`${new Date(user.birthday).toDateString()}`}</p>
 									</div>
 								</div>
 							</div>
