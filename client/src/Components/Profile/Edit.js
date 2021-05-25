@@ -270,7 +270,7 @@ class EditProfile extends React.Component {
 						
 					</div>
 				</div>
-				<div className="form-group row">
+				{/* <div className="form-group row">
 					<label className="col-lg-3 col-form-label form-control-label">Location</label>
 					<div className="col-lg-9">
 						<input className="form-control" type="text" value="" placeholder="City" />
@@ -289,7 +289,7 @@ class EditProfile extends React.Component {
 							placeholder="Country"
 						/>
 					</div>
-				</div>
+				</div> */}
 				<h6 className="text-divider">
 					<span>Account Information</span>
 				</h6>

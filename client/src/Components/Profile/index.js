@@ -250,17 +250,17 @@ class Profile extends react.Component {
 										<p>{user.gender}</p>
 									</div>
 								</div>
-								<div className="row">
+								{/* <div className="row">
 									<div className="col-md-6">
 										<p>Location</p>
 									</div>
 									<div className="col-md-6">
-										{/* <p>
+										<p>
 											{profile.location.city},{profile.location.state},
 											{profile.location.country}
-										</p> */}
+										</p>
 									</div>
-								</div>
+								</div> */}
 								<div className="row">
 									<div className="col-md-6">
 										<p>Birthday</p>
