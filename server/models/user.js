@@ -47,6 +47,19 @@ const userSchema = new mongoose.Schema({
     default: "subscriber"
   },
   bookmarks: [{ type: ObjectId, ref: 'Subdisease' }],
+
+  age : {
+    type: String
+  },
+  gender : {
+    type: String
+  },
+  phoneNumber : {
+    type : String
+  },
+  birthday : {
+    type : Date
+  }
   
 });
 
