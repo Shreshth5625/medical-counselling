@@ -12,19 +12,19 @@ class CardLayout extends Component {
 				image: integrate,
 				title: 'Integrate Solutions',
 				description:
-					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla mauris elementum, aliquet velit nec, placerat tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec nibh dui, ultricies vel posuere quis, maximus quis odio.',
+					'A platform for patients to share health information. Here people like you have the chance to share both personal experience and health data about their ailments, in order to contribute to the discovery of new knowledge and amazing ideas.',
 			},
 			{
 				image: testimonial,
 				title: 'Collect Testimonials',
 				description:
-					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla mauris elementum, aliquet velit nec, placerat tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec nibh dui, ultricies vel posuere quis, maximus quis odio.',
+					'You can put your sickness experiences in context and discover answers to your queries by sharing information on our site. You can know everything there is to know about treatment of patients like you, and what worked best for them. Also, you can connect with patients who have similar conditions, symptoms or therapies.',
 			},
 			{
 				image: doctor,
 				title: 'Good Doctors/Clinics',
 				description:
-					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla mauris elementum, aliquet velit nec, placerat tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec nibh dui, ultricies vel posuere quis, maximus quis odio.',
+					'It helps in collaborating with doctors, researchers, and medical practitioners to increase your understanding of disease and speed up the creation of new treatments. It aims at information sharing that will make a difference in the lives of people like you and improve healthcare, one which puts patients back in the drivers seat.',
 			},
 		];
 

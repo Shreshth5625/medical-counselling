@@ -70,9 +70,7 @@ exports.getPosts = async (req, res) => {
       totalItems = count;
       return Post.find()
         .skip((currentPage - 1) * perPage)
-        .populate('comments', 'text created')
         .populate('comments.postedBy', '_id name')
-        .populate('postedBy', '_id name')
         .sort({created: -1})
         .limit(perPage)
         .select('_id title body likes created tags');
@@ -317,9 +315,7 @@ exports.tags = async (req, res) => {
   const posts = await Post.find()
     .then((count) => {
       return Post.find({ tags: { $all: req.body.tags } })
-        .populate('comments', 'text created')
         .populate('comments.postedBy', '_id name')
-        .populate('postedBy', '_id name')
         .sort({ date: -1 })
 
         .select('_id title body likes created tags');
@@ -337,9 +333,7 @@ exports.pathypost = async (req, res) => {
   const posts = await Post.find()
     .then((count) => {
       return Post.find(({ treatmentTaken: { $all: req.body.treatmentTaken } } )&&({tags:{$all: req.body.tags}}))
-        .populate('comments', 'text created')
         .populate('comments.postedBy', '_id name')
-        .populate('postedBy', '_id name')
         .sort({ date: -1 })
 
         .select('_id title body likes created tags treatmentTaken');
