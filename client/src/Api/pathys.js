@@ -4,7 +4,7 @@ import axios from 'axios';
 export const createPathy = (title, effective, description) => {
 	axios({
 		method: 'post',
-		url: 'https://infinite-harbor-95705.herokuapp.com/api/pathy',
+		url: `${serverUrl}/api/pathy`,
 		headers: {
 			'Content-Type': 'application/json',
 		},
